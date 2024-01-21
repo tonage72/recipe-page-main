@@ -19,6 +19,10 @@ img {
 	--bg-color-preptime: hsl(330, 100%, 98%);
 	--color-preptime-heading: hsl(332, 51%, 32%);
 	--color-general-heading: hsl(14, 45%, 36%);
+	--bg-color-body: hsl(30, 54%, 90%);
+	--bg-color-main: hsl(0, 0%, 100%);
+	--color-text-general: hsl(24, 5%, 18%);
+	--main-max-width: 950px;
 }
 
 html {
@@ -26,27 +30,58 @@ html {
 	font-size: 16px;
 }
 
+body {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--bg-color-body);
+	color: var(--font-general);
+}
+
 .bold-text {
 	font-weight: 600;
 }
 
 main {
-	margin: 2rem 2rem 1rem 2rem;
+	background-color: var(--bg-color-main);
+	width: 100%;
+	padding: 2rem;
+	margin-bottom: 1rem;
+	max-width: var(--main-max-width);
+}
+
+figure {
+	max-width: var(--main-max-width);
+	background-color: white;
 }
 
 .heading-main {
 	font-family: var(--font-headings);
-	font-size: 2rem;
+	font-size: 2.2rem;
+	line-height: 2rem;
+	padding-bottom: 1rem;
+}
+
+.desc {
+	padding-bottom: 2rem;
 }
 
 .heading {
 	font-family: var(--font-headings);
 	font-size: 1.8rem;
+	padding: 1.5rem 0 1rem 0;
 	color: var(--color-general-heading);
+}
+
+li {
+	padding: .5rem 0 .5rem .8rem;
 }
 
 .preparation-time {
 	background-color: var(--bg-color-preptime);
+	padding: 1rem 0;
+	border-radius: 1rem;
 }
 
 .preparation-time ul {
@@ -57,19 +92,49 @@ main {
 	color: var(--color-preptime-heading);
 }
 
+.preparation-time li:nth-child(1) {
+	padding-top: 1rem;
+}
+
 .preparation-time ul::before {
 	content: attr(aria-label);
 	font-size: 1.2rem;
 	font-weight: 600;
+	margin: -1rem;
 	color: var(--color-preptime-heading);
 }
 
-.ingredients li {
-	margin-left: 1rem;
+.ingredients {
+	padding-bottom: 2rem;
 }
 
-.ingredients li::marker {
+.ingredients li,
+.instructions li {
+	margin-left: 1.5rem;
+}
+
+.ingredients li::marker,
+.instructions li::marker,
+.nutrition p:nth-child(even) {
 	color: var(--color-general-heading);
+}
+
+.instructions li::marker,
+.nutrition p:nth-child(even) {
+	font-weight: 600;
+}
+
+.instructions {
+	padding-bottom: 1.5rem;
+}
+
+.nutrition li {
+	display: grid;
+	grid-template-columns: 50% 1fr;
+}
+
+.nutrition p:nth-child(odd) {
+	padding: 0 0 0 1rem;
 }
 
 .attribution {
@@ -80,4 +145,18 @@ main {
 .attribution a {
 	color: hsl(228, 45%, 44%);
 }
-  
+
+@media (min-width: 950px) {
+	figure {
+		padding: 2rem 2rem 0 2rem;
+		border-radius: 1rem 1rem 0 0;
+	}
+
+	body {
+		padding: 6rem 0;
+	}
+
+	main {
+		border-radius: 0 0 1rem 1rem;
+	}
+}
