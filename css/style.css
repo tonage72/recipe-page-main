@@ -21,7 +21,7 @@ img {
 	--color-general-heading: hsl(14, 45%, 36%);
 	--bg-color-body: hsl(30, 54%, 90%);
 	--bg-color-main: hsl(0, 0%, 100%);
-	--color-text-general: hsl(24, 5%, 18%);
+	--color-text-general: hsl(13, 6%, 31%);
 	--main-max-width: 950px;
 	--bg-color-hr: hsl(30, 18%, 87%);
 }
@@ -37,7 +37,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	background-color: var(--bg-color-body);
-	color: var(--font-general);
+	color: var(--color-text-general);
 }
 
 .bold-text {
