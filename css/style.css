@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap');
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	width: 100;
+	display: block;
+}
+
+:root {
+	--font-headings: 'Young Serif', serif;
+	--font-general: 'Outfit', sans-serif;
+	--bg-color-preptime: hsl(330, 100%, 98%);
+	--color-preptime-heading: hsl(332, 51%, 32%);
+	--color-general-heading: hsl(14, 45%, 36%);
+}
+
+html {
+	font-family: var(--font-general);
+	font-size: 16px;
+}
+
+.bold-text {
+	font-weight: 600;
+}
+
+main {
+	margin: 2rem 2rem 1rem 2rem;
+}
+
+.heading-main {
+	font-family: var(--font-headings);
+	font-size: 2rem;
+}
+
+.heading {
+	font-family: var(--font-headings);
+	font-size: 1.8rem;
+	color: var(--color-general-heading);
+}
+
+.preparation-time {
+	background-color: var(--bg-color-preptime);
+}
+
+.preparation-time ul {
+	margin-left: clamp(.5rem, 10vw, 3rem);
+}
+
+.preparation-time li::marker {
+	color: var(--color-preptime-heading);
+}
+
+.preparation-time ul::before {
+	content: attr(aria-label);
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: var(--color-preptime-heading);
+}
+
+.ingredients li {
+	margin-left: 1rem;
+}
+
+.ingredients li::marker {
+	color: var(--color-general-heading);
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+  
