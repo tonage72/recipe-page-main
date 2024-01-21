@@ -62,6 +62,7 @@ figure {
 	font-size: clamp(1.5rem, 10vw, 3.5rem);
 	line-height: clamp(2rem, 10vw, 4rem);
 	padding-bottom: 1rem;
+	color: black;
 }
 
 .desc {
