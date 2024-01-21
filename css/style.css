@@ -23,6 +23,7 @@ img {
 	--bg-color-main: hsl(0, 0%, 100%);
 	--color-text-general: hsl(24, 5%, 18%);
 	--main-max-width: 950px;
+	--bg-color-hr: hsl(30, 18%, 87%);
 }
 
 html {
@@ -58,13 +59,14 @@ figure {
 
 .heading-main {
 	font-family: var(--font-headings);
-	font-size: 2.2rem;
-	line-height: 2rem;
+	font-size: clamp(1.5rem, 10vw, 3.5rem);
+	line-height: clamp(2rem, 10vw, 4rem);
 	padding-bottom: 1rem;
 }
 
 .desc {
 	padding-bottom: 2rem;
+	font-size: clamp(1rem, 4vw, 1.4rem);
 }
 
 .heading {
@@ -76,6 +78,12 @@ figure {
 
 li {
 	padding: .5rem 0 .5rem .8rem;
+}
+
+hr {
+	border: none;
+	height: 1px;
+	background-color: var(--bg-color-hr);
 }
 
 .preparation-time {
@@ -158,5 +166,9 @@ li {
 
 	main {
 		border-radius: 0 0 1rem 1rem;
+	}
+
+	.nutrition li {
+		grid-template-columns: 35% 1fr;
 	}
 }
